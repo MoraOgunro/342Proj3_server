@@ -1,9 +1,13 @@
 import javafx.application.Application;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+BaccaratGame b = new BaccaratGame();
 
 public class JavaFXTemplate extends Application {
 
@@ -17,8 +21,7 @@ public class JavaFXTemplate extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		primaryStage.setTitle("Welcome to JavaFX");
-		
-		
+
 		
 				
 		Scene scene = new Scene(new VBox(), 700,700);
