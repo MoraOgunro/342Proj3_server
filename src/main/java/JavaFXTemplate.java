@@ -7,13 +7,13 @@ import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-BaccaratGame b = new BaccaratGame();
 
 public class JavaFXTemplate extends Application {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		launch(args);
+		
 	}
 
 	//feel free to remove the starter code from this method
