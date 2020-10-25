@@ -56,4 +56,26 @@ class MyTest {
 		assertEquals(50,dealer.deck.size());
 		assertEquals(2,c.size());
 	}
+	@Test
+	void handTotal(){
+		BaccaratGameLogic b = new BaccaratGameLogic();
+		ArrayList<Card> c = new ArrayList<>();
+		c.add(new Card("Clubs", 5));
+		c.add(new Card("Clubs", 1));
+		c.add(new Card("Clubs", 5));
+		assertEquals(11, b.handTotal(c));
+	}
+	@Test
+	void whoWon(){
+		BaccaratGameLogic b = new BaccaratGameLogic();
+		ArrayList<Card> c1 = new ArrayList<>();
+		ArrayList<Card> c2 = new ArrayList<>();
+		c1.add(new Card("Clubs", 5));
+		c1.add(new Card("Clubs", 1));
+		c1.add(new Card("Clubs", 5));
+		c2.add(new Card("Clubs", 1));
+		c2.add(new Card("Clubs", 2));
+		c2.add(new Card("Clubs", 3));
+		assertEquals("Player", b.whoWon(c1,c2));
+	}
 }
