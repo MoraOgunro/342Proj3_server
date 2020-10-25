@@ -25,9 +25,6 @@
     <list default="true" id="7a05fb2a-2b4b-49bc-9a9f-2232a36b7111" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BaccaratDealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaccaratDealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BaccaratGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaccaratGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JavaFXTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JavaFXTemplate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,30 +74,45 @@
       <recent name="C:\Users\Mora Ogunro\Desktop\mogunr2Project3_server\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyTest.generateDeck">
-    <configuration name="JavaFXTemplate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JavaFXTemplate" />
-      <module name="JavaFXSample" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MyTest.dealHand">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyTest.card_constructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MyTest.dealHand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaFXSample" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyTest" />
-      <option name="METHOD_NAME" value="card_constructor" />
+      <option name="METHOD_NAME" value="dealHand" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyTest.deckSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaFXSample" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyTest" />
+      <option name="METHOD_NAME" value="deckSize" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyTest.drawOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaFXSample" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyTest" />
+      <option name="METHOD_NAME" value="drawOne" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -116,11 +128,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyTest.shuffleDeck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaFXSample" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyTest" />
+      <option name="METHOD_NAME" value="shuffleDeck" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyTest.dealHand" />
+        <item itemvalue="JUnit.MyTest.drawOne" />
+        <item itemvalue="JUnit.MyTest.deckSize" />
+        <item itemvalue="JUnit.MyTest.shuffleDeck" />
         <item itemvalue="JUnit.MyTest.generateDeck" />
-        <item itemvalue="JUnit.MyTest.card_constructor" />
-        <item itemvalue="Application.JavaFXTemplate" />
       </list>
     </recent_temporary>
   </component>
@@ -136,7 +160,8 @@
       <workItem from="1603391468169" duration="91000" />
       <workItem from="1603391991012" duration="3016000" />
       <workItem from="1603468677287" duration="1696000" />
-      <workItem from="1603494729180" duration="1483000" />
+      <workItem from="1603494729180" duration="1534000" />
+      <workItem from="1603586956813" duration="1178000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Classes">
       <created>1603470297918</created>
@@ -145,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603470297918</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="card class done">
+      <created>1603496255454</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603496255454</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,7 +197,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Set up Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up Classes" />
+    <MESSAGE value="card class done" />
+    <option name="LAST_COMMIT_MESSAGE" value="card class done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1603392792224">
@@ -188,30 +221,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603470375196" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1603495918310">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1603587936355">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603495918310" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1603495918310">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603587936355" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1603587936355">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603495918310" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1603495918310">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603587936355" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1603587936355">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603495918310" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1603495918310">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603587936355" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1603587936355">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603495918310" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603587936355" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1603392566657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603392566657" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603470304489">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603496258390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603470304489" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603496258390" />
     <state x="759" y="297" key="chooseDestDirectoryDialog" timestamp="1603392912448">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
