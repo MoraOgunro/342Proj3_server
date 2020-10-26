@@ -43,14 +43,18 @@ public class BaccaratDealer {
         deck.add(new Card(suite,1));
 
         for (int i = 2; i < 11; i++) {
-            deck.add(new Card(suite,i));
+            if(i == 10){
+                deck.add(new Card(suite,0));
+            }else{
+                deck.add(new Card(suite,i));
+            }
         }
         //jack
-        deck.add(new Card(suite, 11));
+        deck.add(new Card(suite, 0));
         //queen
-        deck.add(new Card(suite, 12));
+        deck.add(new Card(suite, 0));
         //king
-        deck.add(new Card(suite, 13));
+        deck.add(new Card(suite, 0));
     }
 
 }

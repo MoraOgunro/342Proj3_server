@@ -24,8 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7a05fb2a-2b4b-49bc-9a9f-2232a36b7111" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BaccaratGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaccaratGameLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BaccaratDealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaccaratDealer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,17 +74,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.MyTest.whoWon">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MyTest.dealHand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaFXSample" />
       <option name="PACKAGE_NAME" value="" />
@@ -160,7 +148,8 @@
       <workItem from="1603468677287" duration="1696000" />
       <workItem from="1603494729180" duration="1534000" />
       <workItem from="1603586956813" duration="1474000" />
-      <workItem from="1603589993014" duration="710000" />
+      <workItem from="1603589993014" duration="864000" />
+      <workItem from="1603755825507" duration="432000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Classes">
       <created>1603470297918</created>
@@ -183,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603588431812</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="whoWon and handTotal done">
+      <created>1603590852947</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603590852947</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +201,8 @@
     <MESSAGE value="Set up Classes" />
     <MESSAGE value="card class done" />
     <MESSAGE value="BaccaratDealer done" />
-    <option name="LAST_COMMIT_MESSAGE" value="BaccaratDealer done" />
+    <MESSAGE value="whoWon and handTotal done" />
+    <option name="LAST_COMMIT_MESSAGE" value="whoWon and handTotal done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1603392792224">
@@ -228,30 +225,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603470375196" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1603588443434">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1603590864172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603588443434" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1603588443434">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603590864172" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1603590864172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603588443434" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1603588443434">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603590864172" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1603590864172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603588443434" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1603588443434">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603590864172" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1603590864172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603588443434" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603590864172" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1603392566657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603392566657" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603588435244">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603590857839">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603588435244" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603590857839" />
     <state x="759" y="297" key="chooseDestDirectoryDialog" timestamp="1603392912448">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
