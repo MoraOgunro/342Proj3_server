@@ -78,4 +78,54 @@ class MyTest {
 		c2.add(new Card("Clubs", 3));
 		assertEquals("Player", b.whoWon(c1,c2));
 	}
+	@Test
+	void evaluateBankerDraw(){
+		BaccaratGameLogic gamelogic = new BaccaratGameLogic();
+		ArrayList<Card> c1 = new ArrayList<>();
+		c1.add(new Card("Clubs", 5));
+		c1.add(new Card("Clubs", 1));
+		assertTrue(gamelogic.evaluateBankerDraw(c1,new Card("Clubs",6)));
+		c1.clear();
+		c1.add(new Card("Clubs", 3));
+		c1.add(new Card("Clubs", 1));
+		assertTrue(gamelogic.evaluateBankerDraw(c1,new Card("Clubs",3)));
+		c1.clear();
+		c1.add(new Card("Clubs", 2));
+		c1.add(new Card("Clubs", 1));
+		assertTrue(gamelogic.evaluateBankerDraw(c1,new Card("Clubs",9)));
+		c1.clear();
+		c1.add(new Card("Clubs", 6));
+		c1.add(new Card("Clubs", 1));
+		assertFalse(gamelogic.evaluateBankerDraw(c1,new Card("Clubs",6)));
+		c1.clear();
+		c1.add(new Card("Clubs", 4));
+		c1.add(new Card("Clubs", 1));
+		assertFalse(gamelogic.evaluateBankerDraw(c1,new Card("Clubs",1)));
+		c1.clear();
+		c1.add(new Card("Clubs", 2));
+		c1.add(new Card("Clubs", 2));
+		assertFalse(gamelogic.evaluateBankerDraw(c1,new Card("Clubs",0)));
+	}
+
+	@Test
+	void evaluatePlayerDraw(){
+		BaccaratGameLogic gamelogic = new BaccaratGameLogic();
+		ArrayList<Card> c1 = new ArrayList<>();
+		c1.add(new Card("Clubs", 9));
+		c1.add(new Card("Clubs", 6));
+		assertTrue(gamelogic.evaluatePlayerDraw(c1));
+		c1.clear();
+		c1.add(new Card("Clubs", 2));
+		c1.add(new Card("Clubs", 1));
+		assertTrue(gamelogic.evaluatePlayerDraw(c1));
+		c1.clear();
+		c1.add(new Card("Clubs", 9));
+		c1.add(new Card("Clubs", 9));
+		assertFalse(gamelogic.evaluatePlayerDraw(c1));
+		c1.clear();
+		c1.add(new Card("Clubs", 6));
+		c1.add(new Card("Clubs", 0));
+		assertFalse(gamelogic.evaluatePlayerDraw(c1));
+	}
+
 }

@@ -24,7 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7a05fb2a-2b4b-49bc-9a9f-2232a36b7111" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BaccaratDealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaccaratDealer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BaccaratGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaccaratGameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +74,20 @@
       <recent name="C:\Users\Mora Ogunro\Desktop\mogunr2Project3_server\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyTest.whoWon">
+  <component name="RunManager" selected="JUnit.MyTest.evaluatePlayerDraw">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyTest.dealHand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaFXSample" />
       <option name="PACKAGE_NAME" value="" />
@@ -84,21 +98,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyTest.deckSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MyTest.evaluateBankerDraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaFXSample" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyTest" />
-      <option name="METHOD_NAME" value="deckSize" />
+      <option name="METHOD_NAME" value="evaluateBankerDraw" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyTest.drawOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MyTest.evaluatePlayerDraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaFXSample" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyTest" />
-      <option name="METHOD_NAME" value="drawOne" />
+      <option name="METHOD_NAME" value="evaluatePlayerDraw" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -126,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyTest.evaluatePlayerDraw" />
+        <item itemvalue="JUnit.MyTest.evaluateBankerDraw" />
         <item itemvalue="JUnit.MyTest.whoWon" />
         <item itemvalue="JUnit.MyTest.handTotal" />
         <item itemvalue="JUnit.MyTest.dealHand" />
-        <item itemvalue="JUnit.MyTest.drawOne" />
-        <item itemvalue="JUnit.MyTest.deckSize" />
       </list>
     </recent_temporary>
   </component>
@@ -149,7 +163,7 @@
       <workItem from="1603494729180" duration="1534000" />
       <workItem from="1603586956813" duration="1474000" />
       <workItem from="1603589993014" duration="864000" />
-      <workItem from="1603755825507" duration="432000" />
+      <workItem from="1603755825507" duration="3232000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Classes">
       <created>1603470297918</created>
@@ -179,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603590852947</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed card values">
+      <created>1603756361008</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603756361008</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +223,8 @@
     <MESSAGE value="card class done" />
     <MESSAGE value="BaccaratDealer done" />
     <MESSAGE value="whoWon and handTotal done" />
-    <option name="LAST_COMMIT_MESSAGE" value="whoWon and handTotal done" />
+    <MESSAGE value="fixed card values" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed card values" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1603392792224">
