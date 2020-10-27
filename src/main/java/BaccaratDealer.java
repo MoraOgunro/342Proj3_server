@@ -4,7 +4,10 @@ import java.util.Collections;
 import java.util.Random;
 
 public class BaccaratDealer {
-    ArrayList<Card> deck = new ArrayList<>();
+    ArrayList<Card> deck;
+    BaccaratDealer(){
+        deck = new ArrayList<>();
+    }
 
     public void generateDeck(){
         deck.clear();
@@ -37,7 +40,6 @@ public class BaccaratDealer {
     public int deckSize(){
         return deck.size();
     }
-
     private void generateDeckHelper(String suite){
         //ace
         deck.add(new Card(suite,1));

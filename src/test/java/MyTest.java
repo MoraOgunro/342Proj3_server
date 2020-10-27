@@ -127,5 +127,25 @@ class MyTest {
 		c1.add(new Card("Clubs", 0));
 		assertFalse(gamelogic.evaluatePlayerDraw(c1));
 	}
+	@Test
+	void evaluateWinnings(){
+		BaccaratGame game = new BaccaratGame();
+		//Bet = player, winner = player
+		game.betOn = "Player";
+		game.currentBet = 5;
+		game.playerHand.add(new Card("Clubs", 5));
+		game.playerHand.add(new Card("Clubs", 4));
+		game.bankerHand.add(new Card("Clubs", 1));
+		game.bankerHand.add(new Card("Clubs", 1));
+		assertEquals(5,game.evaluateWinnings());
+		//Bet = player, winner = banker
+		//Bet = player, winner = draw
+		//Bet = banker, winner = player
+		//Bet = banker, winner = banker
+		//Bet = banker, winner = draw
+		//Bet = banker, winner = player
+		//Bet = banker, winner = banker
+		//Bet = banker, winner = draw
+	}
 
 }
