@@ -63,7 +63,7 @@ class MyTest {
 		c.add(new Card("Clubs", 5));
 		c.add(new Card("Clubs", 1));
 		c.add(new Card("Clubs", 5));
-		assertEquals(11, b.handTotal(c));
+		assertEquals(1, b.handTotal(c));
 	}
 	@Test
 	void whoWon(){
@@ -73,10 +73,12 @@ class MyTest {
 		c1.add(new Card("Clubs", 5));
 		c1.add(new Card("Clubs", 1));
 		c1.add(new Card("Clubs", 5));
+
 		c2.add(new Card("Clubs", 1));
 		c2.add(new Card("Clubs", 2));
 		c2.add(new Card("Clubs", 3));
-		assertEquals("Player", b.whoWon(c1,c2));
+
+		assertEquals("Banker", b.whoWon(c1,c2));
 	}
 	@Test
 	void evaluateBankerDraw(){

@@ -76,13 +76,22 @@
       <recent name="C:\Users\Mora Ogunro\Desktop\mogunr2Project3_server\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyTest.evaluateWinnings">
+  <component name="RunManager" selected="JUnit.MyTest">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaFXSample" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -118,16 +127,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyTest.handTotal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaFXSample" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MyTest" />
-      <option name="METHOD_NAME" value="handTotal" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MyTest.whoWon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaFXSample" />
       <option name="PACKAGE_NAME" value="" />
@@ -140,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyTest" />
         <item itemvalue="JUnit.MyTest.evaluateWinnings" />
         <item itemvalue="JUnit.MyTest.evaluatePlayerDraw" />
         <item itemvalue="JUnit.MyTest.evaluateBankerDraw" />
         <item itemvalue="JUnit.MyTest.whoWon" />
-        <item itemvalue="JUnit.MyTest.handTotal" />
       </list>
     </recent_temporary>
   </component>
