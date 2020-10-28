@@ -22,7 +22,6 @@ import java.util.function.Consumer;
 
 public class JavaFXTemplate extends Application {
 	Server serverConnection;
-	Client clientConnection;
 	HashMap<String, Scene> sceneMap;
 	TextField portField;
 	Button onButton, offButton;
@@ -70,23 +69,17 @@ public class JavaFXTemplate extends Application {
 		onButton.setOnAction(event -> {
 			serverConnection = new Server(data -> {
 				Platform.runLater(()->{
-					numberOfClientsLabel.setText(data.toString());
+					numberOfClientsLabel.setText("Number of Clients: " + data.toString());
 				});
 			});
-			clientConnection = new Client(data->{
-				Platform.runLater(()->{
-					numberOfClientsLabel.setText(data.toString());
-				});
-			});
-			clientConnection.start();
 		});
 		offButton.setOnAction(event -> {
-			serverConnection.clients.get(0).send("3");
+
 		});
 	}
 
 	public Scene createGameInfoGUI(Stage primaryStage){
-		numberOfClientsLabel = new Label("TODO: Number of Clients");
+		numberOfClientsLabel = new Label("Number of Clients: 0");
 		numberOfClientsLabel.setStyle("-fx-font-size: 20px");
 		numberOfClientsLabel.setTextFill(Color.web("#ffffff"));
 

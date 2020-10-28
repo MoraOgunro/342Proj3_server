@@ -23,8 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a05fb2a-2b4b-49bc-9a9f-2232a36b7111" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Client.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/JavaFXTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JavaFXTemplate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server.java" afterDir="false" />
     </list>
@@ -134,53 +134,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="projectThreeServer" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="projectThreeServer" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.JavaFXTemplate" />
       <item itemvalue="JUnit.MyTest" />
@@ -217,7 +170,9 @@
       <workItem from="1603819919199" duration="4504000" />
       <workItem from="1603824565686" duration="26000" />
       <workItem from="1603845331467" duration="88000" />
-      <workItem from="1603860170402" duration="10570000" />
+      <workItem from="1603860170402" duration="10842000" />
+      <workItem from="1603916172407" duration="8257000" />
+      <workItem from="1603924600688" duration="312000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Classes">
       <created>1603470297918</created>
@@ -282,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603867844662</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="basic back and forth communication">
+      <created>1603871047728</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1603871047728</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +272,8 @@
     <MESSAGE value="BaccaratGame finished" />
     <MESSAGE value="test bugs fixed" />
     <MESSAGE value="made server GUI's" />
-    <option name="LAST_COMMIT_MESSAGE" value="made server GUI's" />
+    <MESSAGE value="basic back and forth communication" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic back and forth communication" />
   </component>
   <component name="WindowStateProjectService">
     <state x="694" y="342" key="#Notifications" timestamp="1603759118018">
@@ -345,46 +308,50 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603860280180" />
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1603869748997">
+    <state width="968" height="278" key="GridCell.Tab.0.bottom" timestamp="1603924478451">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603869748997" />
-    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1603869748997">
+    <state width="968" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603924478451" />
+    <state width="968" height="278" key="GridCell.Tab.0.center" timestamp="1603924478451">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603869748997" />
-    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1603869748997">
+    <state width="968" height="278" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603924478451" />
+    <state width="968" height="278" key="GridCell.Tab.0.left" timestamp="1603924478451">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603869748997" />
-    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1603869748997">
+    <state width="968" height="278" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603924478451" />
+    <state width="968" height="278" key="GridCell.Tab.0.right" timestamp="1603924478451">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603869748997" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1603869709033">
+    <state width="968" height="278" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603924478451" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1603920761747">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603869709033" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1603869709033">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603920761747" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1603920761747">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603869709033" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1603869709033">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603920761747" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1603920761747">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603869709033" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1603869709033">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603920761747" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1603920761747">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603869709033" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603920761747" />
+    <state x="163" y="224" key="RollbackChangesDialog" timestamp="1603917555820">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="163" y="224" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603917555820" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1603392566657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603392566657" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603867850373">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603871063700">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603867850373" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603871063700" />
     <state x="759" y="297" key="chooseDestDirectoryDialog" timestamp="1603392912448">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -397,10 +364,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="499" y="256" width="921" height="653" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1603823801434" />
-    <state x="342" y="119" key="new project wizard" timestamp="1603392671498">
+    <state x="342" y="119" key="new project wizard" timestamp="1603917274631">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="342" y="119" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1603392671498" />
+    <state x="342" y="119" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1603917274631" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603470032887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

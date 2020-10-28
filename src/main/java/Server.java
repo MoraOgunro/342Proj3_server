@@ -2,10 +2,19 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.function.Consumer;
+
+import javafx.application.Platform;
+import javafx.scene.control.ListView;
+/*
+ * Clicker: A: I really get it    B: No idea what you are talking about
+ * C: kind of following
+ */
 
 public class Server{
 
@@ -13,6 +22,9 @@ public class Server{
     ArrayList<ClientThread> clients = new ArrayList<ClientThread>();
     TheServer server;
     private Consumer<Serializable> callback;
+    String localhost;
+    InetAddress ip;
+
 
     Server(Consumer<Serializable> call){
 
@@ -20,21 +32,29 @@ public class Server{
         server = new TheServer();
         server.start();
     }
+    void updateCount(){
+        count=0;
+        callback.accept(count);
+        System.out.println(count);
+    }
 
     public class TheServer extends Thread{
 
         public void run() {
+            try {
+                 ip=InetAddress.getLocalHost();
+            } catch (UnknownHostException e) {
+                e.printStackTrace();
+            }
 
-            try(ServerSocket mysocket = new ServerSocket(5555)){
+            try(ServerSocket mysocket = new ServerSocket(5555,2)){
                 System.out.println("Server is waiting for a client!");
 
                 while(true) {
-
                     ClientThread c = new ClientThread(mysocket.accept(), count);
-                    callback.accept("client has connected to server: " + "client #" + count);
+                    callback.accept(count);
                     clients.add(c);
                     c.start();
-
                     count++;
 
                 }
@@ -43,7 +63,6 @@ public class Server{
                 callback.accept("Server socket did not launch");
             }
         }//end of while
-
     }
 
     class ClientThread extends Thread{
@@ -79,32 +98,24 @@ public class Server{
                 System.out.println("Streams not open");
             }
 
-            updateClients("new client on server: client #"+count);
+            //updateClients("new client on server: client #"+count);
+
 
             while(true) {
                 try {
                     String data = in.readObject().toString();
-                    callback.accept(data);
+                    callback.accept("client: " + count + " sent: " + data);
                     updateClients("client #"+count+" said: "+data);
 
                 }
                 catch(Exception e) {
-                    callback.accept("OOOOPPs...Something wrong with the socket from client: " + count + "....closing down!");
+                    updateCount();
+                    callback.accept( Server.this.count);
                     updateClients("Client #"+count+" has left the server!");
                     clients.remove(this);
                     break;
                 }
             }
         }//end of run
-        public void send(String data) {
-
-            try {
-                out.writeObject(data);
-                System.out.println("Sent " + data);
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-        }
     }//end of client thread
 }
