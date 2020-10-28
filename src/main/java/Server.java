@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
@@ -24,7 +25,7 @@ public class Server{
 
         public void run() {
 
-            try(ServerSocket mysocket = new ServerSocket(5555);){
+            try(ServerSocket mysocket = new ServerSocket(5555)){
                 System.out.println("Server is waiting for a client!");
 
                 while(true) {
@@ -42,6 +43,7 @@ public class Server{
                 callback.accept("Server socket did not launch");
             }
         }//end of while
+
     }
 
     class ClientThread extends Thread{
@@ -82,7 +84,7 @@ public class Server{
             while(true) {
                 try {
                     String data = in.readObject().toString();
-                    callback.accept("client: " + count + " sent: " + data);
+                    callback.accept(data);
                     updateClients("client #"+count+" said: "+data);
 
                 }
@@ -94,5 +96,15 @@ public class Server{
                 }
             }
         }//end of run
+        public void send(String data) {
+
+            try {
+                out.writeObject(data);
+                System.out.println("Sent " + data);
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
     }//end of client thread
 }
