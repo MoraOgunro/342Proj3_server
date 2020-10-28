@@ -21,7 +21,6 @@ public class BaccaratGame {
     }
 
     public double evaluateWinnings(){
-        //TODO determine if the user won or lost their bet and return the amount won or lost based on the value in currentBet.
         if((betOn.equals("Player")) && (BaccaratGameLogic.whoWon(playerHand, bankerHand).equals("Player"))){
             totalWinnings+=currentBet;
             return currentBet;
@@ -35,5 +34,4 @@ public class BaccaratGame {
         totalWinnings-=currentBet;
         return (-currentBet);
     }
-
 }

@@ -23,11 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a05fb2a-2b4b-49bc-9a9f-2232a36b7111" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BaccaratDealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaccaratDealer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaFXSample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/projectThreeServer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BaccaratGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaccaratGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BaccaratGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaccaratGameLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JavaFXTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JavaFXTemplate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +71,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RecentsManager">
@@ -76,7 +79,14 @@
       <recent name="C:\Users\Mora Ogunro\Desktop\mogunr2Project3_server\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyTest">
+  <component name="RunManager" selected="Application.JavaFXTemplate">
+    <configuration name="JavaFXTemplate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JavaFXTemplate" />
+      <module name="projectThreeServer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -89,7 +99,7 @@
       </method>
     </configuration>
     <configuration name="MyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaFXSample" />
+      <module name="projectThreeServer" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyTest" />
       <option name="TEST_OBJECT" value="class" />
@@ -98,7 +108,7 @@
       </method>
     </configuration>
     <configuration name="MyTest.evaluateBankerDraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaFXSample" />
+      <module name="projectThreeServer" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyTest" />
       <option name="METHOD_NAME" value="evaluateBankerDraw" />
@@ -108,7 +118,7 @@
       </method>
     </configuration>
     <configuration name="MyTest.evaluatePlayerDraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaFXSample" />
+      <module name="projectThreeServer" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyTest" />
       <option name="METHOD_NAME" value="evaluatePlayerDraw" />
@@ -118,7 +128,7 @@
       </method>
     </configuration>
     <configuration name="MyTest.evaluateWinnings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaFXSample" />
+      <module name="projectThreeServer" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyTest" />
       <option name="METHOD_NAME" value="evaluateWinnings" />
@@ -127,23 +137,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyTest.whoWon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaFXSample" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MyTest" />
-      <option name="METHOD_NAME" value="whoWon" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="projectThreeServer" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="projectThreeServer" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JavaFXTemplate" />
         <item itemvalue="JUnit.MyTest" />
         <item itemvalue="JUnit.MyTest.evaluateWinnings" />
         <item itemvalue="JUnit.MyTest.evaluatePlayerDraw" />
         <item itemvalue="JUnit.MyTest.evaluateBankerDraw" />
-        <item itemvalue="JUnit.MyTest.whoWon" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +210,10 @@
       <workItem from="1603586956813" duration="1474000" />
       <workItem from="1603589993014" duration="864000" />
       <workItem from="1603755825507" duration="3501000" />
-      <workItem from="1603819919199" duration="4218000" />
+      <workItem from="1603819919199" duration="4504000" />
+      <workItem from="1603824565686" duration="26000" />
+      <workItem from="1603845331467" duration="88000" />
+      <workItem from="1603860170402" duration="7533000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Classes">
       <created>1603470297918</created>
@@ -207,7 +257,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603759102563</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="BaccaratGame finished">
+      <created>1603824341057</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1603824341057</updated>
+    </task>
+    <task id="LOCAL-00008" summary="test bugs fixed">
+      <created>1603824437699</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1603824437699</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +296,9 @@
     <MESSAGE value="whoWon and handTotal done" />
     <MESSAGE value="fixed card values" />
     <MESSAGE value="game logic done" />
-    <option name="LAST_COMMIT_MESSAGE" value="game logic done" />
+    <MESSAGE value="BaccaratGame finished" />
+    <MESSAGE value="test bugs fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="test bugs fixed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="694" y="342" key="#Notifications" timestamp="1603759118018">
@@ -259,50 +325,50 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603468807140" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1603470375196">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1603860280180">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603470375196" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1603823962644">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603860280180" />
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1603867550995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603823962644" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center" timestamp="1603823962644">
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603867550995" />
+    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1603867550995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603823962644" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left" timestamp="1603823962644">
+    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603867550995" />
+    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1603867550995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603823962644" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right" timestamp="1603823962644">
+    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603867550995" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1603867550995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603823962644" />
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1603823963023">
+    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603867550995" />
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1603824451631">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603823963023" />
-    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1603823963023">
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603824451631" />
+    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1603824451631">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603823963023" />
-    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1603823963023">
+    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603824451631" />
+    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1603824451631">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603823963023" />
-    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1603823963023">
+    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603824451631" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1603824451631">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603823963023" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603824451631" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1603392566657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603392566657" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603759106330">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603824441342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603759106330" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603824441342" />
     <state x="759" y="297" key="chooseDestDirectoryDialog" timestamp="1603392912448">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
