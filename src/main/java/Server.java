@@ -22,18 +22,24 @@ public class Server{
     ArrayList<ClientThread> clients = new ArrayList<ClientThread>();
     TheServer server;
     private Consumer<Serializable> callback;
+    BaccaratInfo baccaratInfo;
 
 
     Server(Consumer<Serializable> call){
-
+        baccaratInfo = new BaccaratInfo();
+        baccaratInfo.numOfClients = count;
         callback = call;
         server = new TheServer();
         server.start();
     }
     void updateCount(){
         count--;
-        callback.accept(count);
     }
+    void updateGameInfo(){
+        baccaratInfo.numOfClients = count;
+        callback.accept(baccaratInfo);
+    }
+
 
     public class TheServer extends Thread{
 
@@ -44,13 +50,13 @@ public class Server{
                 while(true) {
                     ClientThread c = new ClientThread(mysocket.accept(), count+1);
                     count++;
-                    callback.accept(count);
+                    updateGameInfo();
                     clients.add(c);
                     c.start();
                 }
             }//end of try
             catch(Exception e) {
-                callback.accept("Server socket did not launch");
+                System.out.println("Server socket did not launch");
             }
         }//end of while
     }
@@ -77,7 +83,7 @@ public class Server{
             }
         }
 
-        public void send(int data) {
+        public void send(BaccaratInfo data) {
 
             try {
                 out.writeObject(data);
@@ -104,15 +110,15 @@ public class Server{
             while(true) {
                 try {
                     String data = in.readObject().toString();
-                    callback.accept("client: " + clientCount + " sent: " + data);
-                    updateClients("client #"+clientCount+" said: "+data);
+                    //callback.accept("client: " + clientCount + " sent: " + data);
+                    //updateClients("client #"+clientCount+" said: "+data);
 
                 }
                 catch(Exception e) {
                     updateCount();
-
+                    updateGameInfo();
                     //send(count);
-                    updateClients("Client #"+clientCount+" has left the server!");
+                    //updateClients("Client #"+clientCount+" has left the server!");
                     clients.remove(this);
                     break;
                 }

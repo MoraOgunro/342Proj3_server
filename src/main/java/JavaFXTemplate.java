@@ -69,7 +69,7 @@ public class JavaFXTemplate extends Application {
 		onButton.setOnAction(event -> {
 			serverConnection = new Server(data -> {
 				Platform.runLater(()->{
-					numberOfClientsLabel.setText("Number of Clients: " + data.toString());
+					updateGUI((BaccaratInfo) data);
 				});
 			});
 		});
@@ -78,6 +78,9 @@ public class JavaFXTemplate extends Application {
 		});
 	}
 
+	public void updateGUI(BaccaratInfo baccaratInfo){
+		numberOfClientsLabel.setText("Number of clients " + String.valueOf(baccaratInfo.numOfClients));
+	}
 	public Scene createGameInfoGUI(Stage primaryStage){
 		numberOfClientsLabel = new Label("Number of Clients: 0");
 		numberOfClientsLabel.setStyle("-fx-font-size: 20px");
