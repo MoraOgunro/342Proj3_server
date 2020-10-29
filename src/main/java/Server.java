@@ -18,12 +18,10 @@ import javafx.scene.control.ListView;
 
 public class Server{
 
-    int count = 1;
+    int count = 0;
     ArrayList<ClientThread> clients = new ArrayList<ClientThread>();
     TheServer server;
     private Consumer<Serializable> callback;
-    String localhost;
-    InetAddress ip;
 
 
     Server(Consumer<Serializable> call){
@@ -33,30 +31,23 @@ public class Server{
         server.start();
     }
     void updateCount(){
-        count=0;
-        callback.accept(count);
+        count--;
+        //callback.accept(count);
         System.out.println(count);
     }
 
     public class TheServer extends Thread{
 
         public void run() {
-            try {
-                 ip=InetAddress.getLocalHost();
-            } catch (UnknownHostException e) {
-                e.printStackTrace();
-            }
-
             try(ServerSocket mysocket = new ServerSocket(5555,2)){
                 System.out.println("Server is waiting for a client!");
 
                 while(true) {
-                    ClientThread c = new ClientThread(mysocket.accept(), count);
+                    ClientThread c = new ClientThread(mysocket.accept(), count+1);
+                    count++;
                     callback.accept(count);
                     clients.add(c);
                     c.start();
-                    count++;
-
                 }
             }//end of try
             catch(Exception e) {
@@ -68,13 +59,13 @@ public class Server{
     class ClientThread extends Thread{
 
         Socket connection;
-        int count;
+        int clientCount;
         ObjectInputStream in;
         ObjectOutputStream out;
 
         ClientThread(Socket s, int count){
             this.connection = s;
-            this.count = count;
+            this.clientCount = count;
         }
 
         public void updateClients(String message) {
@@ -84,6 +75,16 @@ public class Server{
                     t.out.writeObject(message);
                 }
                 catch(Exception e) {}
+            }
+        }
+
+        public void send(int data) {
+
+            try {
+                out.writeObject(data);
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
             }
         }
 
@@ -104,14 +105,15 @@ public class Server{
             while(true) {
                 try {
                     String data = in.readObject().toString();
-                    callback.accept("client: " + count + " sent: " + data);
-                    updateClients("client #"+count+" said: "+data);
+                    callback.accept("client: " + clientCount + " sent: " + data);
+                    updateClients("client #"+clientCount+" said: "+data);
 
                 }
                 catch(Exception e) {
                     updateCount();
-                    callback.accept( Server.this.count);
-                    updateClients("Client #"+count+" has left the server!");
+                    callback.accept(count);
+                    //send(count);
+                    updateClients("Client #"+clientCount+" has left the server!");
                     clients.remove(this);
                     break;
                 }
