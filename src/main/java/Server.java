@@ -32,8 +32,7 @@ public class Server{
     }
     void updateCount(){
         count--;
-        //callback.accept(count);
-        System.out.println(count);
+        callback.accept(count);
     }
 
     public class TheServer extends Thread{
@@ -111,7 +110,7 @@ public class Server{
                 }
                 catch(Exception e) {
                     updateCount();
-                    callback.accept(count);
+
                     //send(count);
                     updateClients("Client #"+clientCount+" has left the server!");
                     clients.remove(this);
