@@ -24,6 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7a05fb2a-2b4b-49bc-9a9f-2232a36b7111" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BaccaratInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaccaratInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/JavaFXTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JavaFXTemplate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server.java" afterDir="false" />
     </list>
@@ -79,6 +80,17 @@
     <configuration name="JavaFXTemplate" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JavaFXTemplate" />
       <module name="projectThreeServer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,7 +174,7 @@
       <workItem from="1603916172407" duration="8257000" />
       <workItem from="1603924600688" duration="356000" />
       <workItem from="1603929852902" duration="1548000" />
-      <workItem from="1603989706782" duration="2777000" />
+      <workItem from="1603989706782" duration="18823000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Classes">
       <created>1603470297918</created>
@@ -255,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603991436124</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="passing # of clients/gui update done">
+      <created>1603992544066</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1603992544066</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +305,8 @@
     <MESSAGE value="basic back and forth communication" />
     <MESSAGE value="connection to client working" />
     <MESSAGE value="fixed client numbering" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed client numbering" />
+    <MESSAGE value="passing # of clients/gui update done" />
+    <option name="LAST_COMMIT_MESSAGE" value="passing # of clients/gui update done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="694" y="342" key="#Notifications" timestamp="1603759118018">
@@ -321,38 +341,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603860280180" />
-    <state width="917" height="278" key="GridCell.Tab.0.bottom" timestamp="1603992492950">
+    <state width="914" height="279" key="GridCell.Tab.0.bottom" timestamp="1604008783810">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="917" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603992492950" />
-    <state width="917" height="278" key="GridCell.Tab.0.center" timestamp="1603992492950">
+    <state width="914" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604008783810" />
+    <state width="914" height="279" key="GridCell.Tab.0.center" timestamp="1604008783810">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="917" height="278" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603992492950" />
-    <state width="917" height="278" key="GridCell.Tab.0.left" timestamp="1603992492950">
+    <state width="914" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604008783810" />
+    <state width="914" height="279" key="GridCell.Tab.0.left" timestamp="1604008783810">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="917" height="278" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603992492950" />
-    <state width="917" height="278" key="GridCell.Tab.0.right" timestamp="1603992492950">
+    <state width="914" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604008783810" />
+    <state width="914" height="279" key="GridCell.Tab.0.right" timestamp="1604008783810">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="917" height="278" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603992492950" />
-    <state width="917" height="347" key="GridCell.Tab.1.bottom" timestamp="1603992457396">
+    <state width="914" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604008783810" />
+    <state width="914" height="347" key="GridCell.Tab.1.bottom" timestamp="1604008147874">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="917" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603992457396" />
-    <state width="917" height="347" key="GridCell.Tab.1.center" timestamp="1603992457396">
+    <state width="914" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604008147874" />
+    <state width="914" height="347" key="GridCell.Tab.1.center" timestamp="1604008147874">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="917" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603992457396" />
-    <state width="917" height="347" key="GridCell.Tab.1.left" timestamp="1603992457396">
+    <state width="914" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604008147874" />
+    <state width="914" height="347" key="GridCell.Tab.1.left" timestamp="1604008147874">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="917" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603992457396" />
-    <state width="917" height="347" key="GridCell.Tab.1.right" timestamp="1603992457396">
+    <state width="914" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604008147874" />
+    <state width="914" height="347" key="GridCell.Tab.1.right" timestamp="1604008147874">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="917" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603992457396" />
+    <state width="914" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604008147874" />
     <state x="163" y="224" key="RollbackChangesDialog" timestamp="1603990517976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -387,19 +407,18 @@
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603470032887" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Server.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.lang.Integer" memberName="value" />
+        <PinnedItemInfo parentTag="BaccaratInfo" memberName="bet" />
+      </pinned-members>
+    </pin-to-top-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="count" language="JAVA" />
-        <watch expression="baccaratInfo.numOfClients" language="JAVA" />
+        <watch expression="clients" language="JAVA" />
+        <watch expression="baccaratInfoHashMap" language="JAVA" />
+        <watch expression="((SimpleObjectProperty)c1GameInfoBox.items).value" custom="javafx.beans.property.SimpleObjectProperty" />
+        <watch expression="incomingFromClientData" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

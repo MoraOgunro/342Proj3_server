@@ -69,17 +69,29 @@ public class JavaFXTemplate extends Application {
 		onButton.setOnAction(event -> {
 			serverConnection = new Server(data -> {
 				Platform.runLater(()->{
-					updateGUI((BaccaratInfo) data);
+					updateGUI((HashMap<Integer, BaccaratInfo>) data);
+//					if(serverConnection.count > 0){
+//						//serverConnection.clients.get(0).syncClient();
+//					}
 				});
 			});
 		});
 		offButton.setOnAction(event -> {
-
+			serverConnection.clients.get(0).syncClient();
 		});
 	}
 
-	public void updateGUI(BaccaratInfo baccaratInfo){
-		numberOfClientsLabel.setText("Number of clients " + String.valueOf(baccaratInfo.numOfClients));
+	Label c1StatusLabel;
+	Label c2StatusLabel;
+	ListView c1GameInfoBox;
+
+	public void updateGUI(HashMap<Integer,BaccaratInfo> baccaratInfoHashMap){
+		numberOfClientsLabel.setText("Number of clients " + serverConnection.count);
+		c1StatusLabel.setText(baccaratInfoHashMap.get(1).clientConnected);
+		c2StatusLabel.setText(baccaratInfoHashMap.get(2).clientConnected);
+		c1GameInfoBox.getItems().clear();
+		c1GameInfoBox.getItems().add(baccaratInfoHashMap.get(1).bet);
+
 	}
 	public Scene createGameInfoGUI(Stage primaryStage){
 		numberOfClientsLabel = new Label("Number of Clients: 0");
@@ -89,17 +101,17 @@ public class JavaFXTemplate extends Application {
 		Label c1 = new Label("Client 1: ");
 		c1.setStyle("-fx-font-size: 20px");
 		c1.setTextFill(Color.web("#ffffff"));
-		Label c1StatusLabel = new Label("Disconnected");
+		c1StatusLabel = new Label("Disconnected");
 		c1StatusLabel.setStyle("-fx-font-size: 20px");
 		c1StatusLabel.setTextFill(Color.web("#ffffff"));
-		ListView c1GameInfoBox = new ListView();
+		c1GameInfoBox = new ListView();
 		c1GameInfoBox.setStyle("-fx-pref-height: 300px");
 		ArrayList c1GameInfo = new ArrayList();
 
 		Label c2 = new Label("Client 2: ");
 		c2.setStyle("-fx-font-size: 20px");
 		c2.setTextFill(Color.web("#ffffff"));
-		Label c2StatusLabel = new Label("Disconnected");
+		c2StatusLabel = new Label("Disconnected");
 		c2StatusLabel.setStyle("-fx-font-size: 20px");
 		c2StatusLabel.setTextFill(Color.web("#ffffff"));
 		ListView c2GameInfoBox = new ListView();
@@ -127,9 +139,6 @@ public class JavaFXTemplate extends Application {
 
 		Scene scene = new Scene(gameInfoContainer, 500,500);
 		return scene;
-	}
-	public void changeConnectionLabel(Label l, String status){
-		l.setText(status);
 	}
 }
 

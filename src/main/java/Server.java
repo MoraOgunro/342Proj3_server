@@ -7,6 +7,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.function.Consumer;
 
 import javafx.application.Platform;
@@ -19,15 +20,17 @@ import javafx.scene.control.ListView;
 public class Server{
 
     int count = 0;
+    int a = -99;
     ArrayList<ClientThread> clients = new ArrayList<ClientThread>();
     TheServer server;
     private Consumer<Serializable> callback;
-    BaccaratInfo baccaratInfo;
+    HashMap<Integer,BaccaratInfo> baccaratInfoHashMap;
 
 
     Server(Consumer<Serializable> call){
-        baccaratInfo = new BaccaratInfo();
-        baccaratInfo.numOfClients = count;
+        baccaratInfoHashMap = new HashMap<>();
+        baccaratInfoHashMap.put(1,new BaccaratInfo());
+        baccaratInfoHashMap.put(2,new BaccaratInfo());
         callback = call;
         server = new TheServer();
         server.start();
@@ -35,9 +38,12 @@ public class Server{
     void updateCount(){
         count--;
     }
+    void updateConnectionStatus(int clientNum, String status){
+        baccaratInfoHashMap.get(clientNum).clientConnected = status;
+    }
     void updateGameInfo(){
-        baccaratInfo.numOfClients = count;
-        callback.accept(baccaratInfo);
+        callback.accept(baccaratInfoHashMap);
+        //clients.get(0).syncClient();
     }
 
 
@@ -48,11 +54,23 @@ public class Server{
                 System.out.println("Server is waiting for a client!");
 
                 while(true) {
-                    ClientThread c = new ClientThread(mysocket.accept(), count+1);
-                    count++;
-                    updateGameInfo();
-                    clients.add(c);
-                    c.start();
+                    if(count < 3){
+                        Socket socket = mysocket.accept();
+                        if(baccaratInfoHashMap.get(1).clientConnected.equals("Disconnected")){
+                            a = 1;
+                        }else if (baccaratInfoHashMap.get(2).clientConnected.equals("Disconnected")){
+                            a = 2;
+                        }else{
+                            break;
+                        }
+                        ClientThread c = new ClientThread(socket, a);
+                        clients.add(c);
+                        count++;
+                        updateConnectionStatus(a,"Connected");
+                        updateGameInfo();
+                        //clients.get(0).syncClient();
+                        c.start();
+                    }
                 }
             }//end of try
             catch(Exception e) {
@@ -73,13 +91,19 @@ public class Server{
             this.clientCount = count;
         }
 
-        public void updateClients(String message) {
-            for(int i = 0; i < clients.size(); i++) {
-                ClientThread t = clients.get(i);
-                try {
-                    t.out.writeObject(message);
-                }
-                catch(Exception e) {}
+        public void syncClient() {
+//            for(int i = 0; i < clients.size(); i++) {
+//                ClientThread t = clients.get(i);
+//                try {
+//                    t.out.writeObject(message);
+//                }
+//                catch(Exception e) {}
+//            }
+            try{
+                out.writeObject(baccaratInfoHashMap.get(this.clientCount));
+                out.reset();
+            }catch (Exception e){
+                e.printStackTrace();
             }
         }
 
@@ -87,6 +111,7 @@ public class Server{
 
             try {
                 out.writeObject(data);
+                out.reset();
             } catch (IOException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -99,6 +124,7 @@ public class Server{
                 in = new ObjectInputStream(connection.getInputStream());
                 out = new ObjectOutputStream(connection.getOutputStream());
                 connection.setTcpNoDelay(true);
+                syncClient();
             }
             catch(Exception e) {
                 System.out.println("Streams not open");
@@ -109,16 +135,22 @@ public class Server{
 
             while(true) {
                 try {
-                    String data = in.readObject().toString();
-                    //callback.accept("client: " + clientCount + " sent: " + data);
+                    BaccaratInfo incomingFromClientData = (BaccaratInfo) in.readObject();
+                    //TODO update gui when client sends data back
+                    //Determine what client's hashmap index it is from
+                    //Update hashmap
+                    //send with callback
+                    baccaratInfoHashMap.replace(clientCount,incomingFromClientData);
+                    System.out.println(this.getName());
+                    updateGameInfo();
                     //updateClients("client #"+clientCount+" said: "+data);
 
                 }
                 catch(Exception e) {
                     updateCount();
+                    updateConnectionStatus(clientCount,"Disconnected");
                     updateGameInfo();
                     //send(count);
-                    //updateClients("Client #"+clientCount+" has left the server!");
                     clients.remove(this);
                     break;
                 }

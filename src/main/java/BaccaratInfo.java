@@ -6,6 +6,8 @@ public class BaccaratInfo implements Serializable {
     String whoWon;
     String eval;
     int numOfClients;
+    String clientConnected;
+    int bet;
 
     BaccaratInfo() {
         playerTotal = 0;
@@ -13,5 +15,7 @@ public class BaccaratInfo implements Serializable {
         whoWon = "";
         eval = "";
         numOfClients = 0;
+        clientConnected = "Disconnected";
+        int bet = 0;
     }
 }
