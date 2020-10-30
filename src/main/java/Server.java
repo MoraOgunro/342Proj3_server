@@ -18,7 +18,6 @@ import javafx.scene.control.ListView;
  */
 
 public class Server{
-
     int count = 0;
     int a = -99;
     ArrayList<ClientThread> clients = new ArrayList<ClientThread>();
@@ -52,7 +51,9 @@ public class Server{
 
     public class TheServer extends Thread{
 
+
         public void run() {
+
             try(ServerSocket mysocket = new ServerSocket(5555,2)){
                 System.out.println("Server is waiting for a client!");
 
@@ -94,13 +95,7 @@ public class Server{
         }
 
         public void syncClient() {
-//            for(int i = 0; i < clients.size(); i++) {
-//                ClientThread t = clients.get(i);
-//                try {
-//                    t.out.writeObject(message);
-//                }
-//                catch(Exception e) {}
-//            }
+
             try{
                 out.writeObject(baccaratInfoHashMap.get(this.clientCount));
                 out.reset();
@@ -131,9 +126,6 @@ public class Server{
             catch(Exception e) {
                 System.out.println("Streams not open");
             }
-
-            //updateClients("new client on server: client #"+count);
-
 
             while(true) {
                 try {
@@ -168,8 +160,16 @@ public class Server{
                     updateConnectionStatus(clientCount,"Disconnected");
                     baccaratInfoHashMap.get(clientCount).clear();
                     updateGameInfo();
-                    //send(count);
                     clients.remove(this);
+                    try {
+                        connection.shutdownInput();
+                        connection.shutdownOutput();
+                        connection.close();
+
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    }
+                    this.currentThread().interrupt();
                     break;
                 }
             }

@@ -40,7 +40,9 @@ public class JavaFXTemplate extends Application {
 		// TODO Auto-generated method stub
 		sceneMap = new HashMap<String, Scene>();
 		primaryStage.setTitle("Baccarat Server");
-		portField = new TextField("Enter Port Number");
+		portField = new TextField();
+		portField.setPromptText("Enter Port");
+
 		portField.setStyle("-fx-pref-width: 300px");
 		onButton = new Button("ON");
 		onButton.setStyle("-fx-pref-height: 300px");
@@ -50,23 +52,33 @@ public class JavaFXTemplate extends Application {
 		offButton.setStyle("-fx-pref-width: 350px");
 		HBox buttonBox = new HBox(10,onButton,offButton);
 		gameInfoButton = new Button("Game Info");
-		VBox serverIntroVBox = new VBox(10,portField, buttonBox,gameInfoButton);
+		Label connectLabel = new Label();
+		connectLabel.setStyle("-fx-font-size: 20px");
+		VBox serverIntroVBox = new VBox(10,portField, buttonBox,gameInfoButton, connectLabel);
 		serverIntroVBox.setAlignment(Pos.CENTER);
 		BorderPane container = new BorderPane();
 		container.setPadding(new Insets(100));
 		container.setCenter(serverIntroVBox);
 		Scene serverIntroScene = new Scene(container, 500,500);
 		sceneMap.put("serverIntro",serverIntroScene);
+		portField.getParent().requestFocus();
 		sceneMap.put("gameInfo", createGameInfoGUI(primaryStage));
-
-
 
 		primaryStage.setScene(sceneMap.get("serverIntro"));
 		primaryStage.show();
 
-
 		gameInfoButton.setOnAction(event -> primaryStage.setScene(sceneMap.get("gameInfo")));
 		onButton.setOnAction(event -> {
+			String port = portField.getText();
+			try{
+				ConnectionInfo.setPORT(Integer.parseInt(port));
+			}catch (Exception e){
+				connectLabel.setText("Can't Start Port. Try Again.");
+				connectLabel.setTextFill(Color.web("#b30404"));
+				return;
+			}
+			connectLabel.setText("Server is running!");
+			connectLabel.setTextFill(Color.web("#009603"));
 			serverConnection = new Server(data -> {
 				Platform.runLater(()->{
 					updateGUI((HashMap<Integer, BaccaratInfo>) data);
@@ -74,7 +86,8 @@ public class JavaFXTemplate extends Application {
 			});
 		});
 		offButton.setOnAction(event -> {
-			serverConnection.clients.get(0).syncClient();
+			connectLabel.setText("This feature doesn't work yet :(");
+			connectLabel.setTextFill(Color.web("#000000"));
 		});
 	}
 
@@ -96,9 +109,9 @@ public class JavaFXTemplate extends Application {
 		}
 		c2GameInfoBox.getItems().clear();
 		if(c2StatusLabel.getText().equals("Connected")){
-			c2GameInfoBox.getItems().add("Bet: " +baccaratInfoHashMap.get(1).bet);
-			c2GameInfoBox.getItems().add("Total: " +baccaratInfoHashMap.get(1).playerTotal);
-			c2GameInfoBox.getItems().add("Playing Another Hand?: " +baccaratInfoHashMap.get(1).playingAnotherHand);
+			c2GameInfoBox.getItems().add("Bet: " +baccaratInfoHashMap.get(2).bet);
+			c2GameInfoBox.getItems().add("Total: " +baccaratInfoHashMap.get(2).playerTotal);
+			c2GameInfoBox.getItems().add("Playing Another Hand?: " +baccaratInfoHashMap.get(2).playingAnotherHand);
 		}
 	}
 	public Scene createGameInfoGUI(Stage primaryStage){
@@ -142,8 +155,6 @@ public class JavaFXTemplate extends Application {
 		gameInfoContainer.setCenter(v3);
 		gameInfoContainer.setStyle("-fx-background-color: darkgreen");
 		gameInfoContainer.setPadding(new Insets(10));
-
-
 
 		Scene scene = new Scene(gameInfoContainer, 500,500);
 		return scene;
