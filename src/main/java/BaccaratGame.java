@@ -8,6 +8,7 @@ public class BaccaratGame {
     double totalWinnings;
 
     String betOn;
+    String whoWon;
 
     BaccaratGame(){
         theDealer = new BaccaratDealer();
@@ -18,20 +19,37 @@ public class BaccaratGame {
         betOn = "";
         playerHand = new ArrayList<>();
         bankerHand = new ArrayList<>();
+        whoWon = "";
     }
 
     public double evaluateWinnings(){
-        if((betOn.equals("Player")) && (BaccaratGameLogic.whoWon(playerHand, bankerHand).equals("Player"))){
+        whoWon = BaccaratGameLogic.whoWon(playerHand, bankerHand);
+        if((betOn.equals("Player")) && (whoWon.equals("Player"))){
             totalWinnings+=currentBet;
             return currentBet;
-        }else if((betOn.equals("Banker")) && (BaccaratGameLogic.whoWon(playerHand, bankerHand).equals("Banker"))){
+        }else if((betOn.equals("Banker")) && (whoWon.equals("Banker"))){
             totalWinnings+=currentBet;
             return currentBet;
-        }else if ((betOn.equals("Draw")) && (BaccaratGameLogic.whoWon(playerHand, bankerHand).equals("Draw"))){
+        }else if ((betOn.equals("Draw")) && (whoWon.equals("Draw"))){
             totalWinnings+=currentBet;
             return currentBet;
         }
         totalWinnings-=currentBet;
         return (-currentBet);
     }
+    public void dealBothHands(){
+        Card c = null;
+        playerHand = theDealer.dealHand();
+        bankerHand = theDealer.dealHand();
+        if(BaccaratGameLogic.evaluatePlayerDraw(playerHand)){
+            playerHand.add(theDealer.drawOne());
+        }
+        if(playerHand.size() == 3){
+            c = playerHand.get(2);
+        }
+        if(BaccaratGameLogic.evaluateBankerDraw(bankerHand,c)){
+            bankerHand.add(theDealer.drawOne());
+        }
+    }
+
 }

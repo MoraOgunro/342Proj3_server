@@ -70,9 +70,6 @@ public class JavaFXTemplate extends Application {
 			serverConnection = new Server(data -> {
 				Platform.runLater(()->{
 					updateGUI((HashMap<Integer, BaccaratInfo>) data);
-//					if(serverConnection.count > 0){
-//						//serverConnection.clients.get(0).syncClient();
-//					}
 				});
 			});
 		});
@@ -84,14 +81,25 @@ public class JavaFXTemplate extends Application {
 	Label c1StatusLabel;
 	Label c2StatusLabel;
 	ListView c1GameInfoBox;
+	ListView c2GameInfoBox;
 
 	public void updateGUI(HashMap<Integer,BaccaratInfo> baccaratInfoHashMap){
 		numberOfClientsLabel.setText("Number of clients " + serverConnection.count);
 		c1StatusLabel.setText(baccaratInfoHashMap.get(1).clientConnected);
 		c2StatusLabel.setText(baccaratInfoHashMap.get(2).clientConnected);
 		c1GameInfoBox.getItems().clear();
-		c1GameInfoBox.getItems().add(baccaratInfoHashMap.get(1).bet);
+		if(c1StatusLabel.getText().equals("Connected")){
+			c1GameInfoBox.getItems().add("Bet: " + baccaratInfoHashMap.get(1).bet);
+			c1GameInfoBox.getItems().add("Total: " +baccaratInfoHashMap.get(1).playerTotal);
+			c1GameInfoBox.getItems().add("Playing Another Hand?: " +baccaratInfoHashMap.get(1).playingAnotherHand);
 
+		}
+		c2GameInfoBox.getItems().clear();
+		if(c2StatusLabel.getText().equals("Connected")){
+			c2GameInfoBox.getItems().add("Bet: " +baccaratInfoHashMap.get(1).bet);
+			c2GameInfoBox.getItems().add("Total: " +baccaratInfoHashMap.get(1).playerTotal);
+			c2GameInfoBox.getItems().add("Playing Another Hand?: " +baccaratInfoHashMap.get(1).playingAnotherHand);
+		}
 	}
 	public Scene createGameInfoGUI(Stage primaryStage){
 		numberOfClientsLabel = new Label("Number of Clients: 0");
@@ -114,7 +122,7 @@ public class JavaFXTemplate extends Application {
 		c2StatusLabel = new Label("Disconnected");
 		c2StatusLabel.setStyle("-fx-font-size: 20px");
 		c2StatusLabel.setTextFill(Color.web("#ffffff"));
-		ListView c2GameInfoBox = new ListView();
+		c2GameInfoBox = new ListView();
 		c2GameInfoBox.setStyle("-fx-pref-height: 300px");
 		ArrayList c2GameInfo = new ArrayList();
 

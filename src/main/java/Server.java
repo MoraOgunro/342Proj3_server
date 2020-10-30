@@ -25,12 +25,16 @@ public class Server{
     TheServer server;
     private Consumer<Serializable> callback;
     HashMap<Integer,BaccaratInfo> baccaratInfoHashMap;
+    HashMap<Integer,BaccaratGame> game;
 
 
     Server(Consumer<Serializable> call){
         baccaratInfoHashMap = new HashMap<>();
         baccaratInfoHashMap.put(1,new BaccaratInfo());
         baccaratInfoHashMap.put(2,new BaccaratInfo());
+        game = new HashMap<>();
+        game.put(1, new BaccaratGame());
+        game.put(2, new BaccaratGame());
         callback = call;
         server = new TheServer();
         server.start();
@@ -42,10 +46,9 @@ public class Server{
         baccaratInfoHashMap.get(clientNum).clientConnected = status;
     }
     void updateGameInfo(){
-        callback.accept(baccaratInfoHashMap);
-        //clients.get(0).syncClient();
-    }
 
+        callback.accept(baccaratInfoHashMap);
+    }
 
     public class TheServer extends Thread{
 
@@ -68,7 +71,6 @@ public class Server{
                         count++;
                         updateConnectionStatus(a,"Connected");
                         updateGameInfo();
-                        //clients.get(0).syncClient();
                         c.start();
                     }
                 }
@@ -136,19 +138,35 @@ public class Server{
             while(true) {
                 try {
                     BaccaratInfo incomingFromClientData = (BaccaratInfo) in.readObject();
-                    //TODO update gui when client sends data back
-                    //Determine what client's hashmap index it is from
-                    //Update hashmap
-                    //send with callback
+
                     baccaratInfoHashMap.replace(clientCount,incomingFromClientData);
                     System.out.println(this.getName());
+                    //TODO receive all needed data into game
+                    game.get(clientCount).currentBet =  baccaratInfoHashMap.get(clientCount).bet;
+                    game.get(clientCount).betOn = baccaratInfoHashMap.get(clientCount).betOn;
+                    game.get(clientCount).totalWinnings = baccaratInfoHashMap.get(clientCount).playerTotal;
+                    //TODO make game calculations
+                    game.get(clientCount).dealBothHands();
+                    game.get(clientCount).evaluateWinnings();
+                    //TODO store all data in baccaratInfo
+                    baccaratInfoHashMap.get(clientCount).totalEarnings = (int) game.get(clientCount).totalWinnings;
+                    baccaratInfoHashMap.get(clientCount).playerTotal = BaccaratGameLogic.handTotal(game.get(clientCount).playerHand);
+                    baccaratInfoHashMap.get(clientCount).bankerTotal = BaccaratGameLogic.handTotal(game.get(clientCount).bankerHand);
+                    baccaratInfoHashMap.get(clientCount).whoWon = game.get(clientCount).whoWon;
+                    baccaratInfoHashMap.get(clientCount).eval = "You bet " + game.get(clientCount).betOn + " and " + game.get(clientCount).whoWon + " won";
+                    baccaratInfoHashMap.get(clientCount).playingAnotherHand = false;
+                    baccaratInfoHashMap.get(clientCount).playerCards = game.get(clientCount).playerHand;
+                    baccaratInfoHashMap.get(clientCount).bankerCards = game.get(clientCount).bankerHand;
+                    //TODO send baccaratInfo back
                     updateGameInfo();
-                    //updateClients("client #"+clientCount+" said: "+data);
+                    syncClient();
+
 
                 }
                 catch(Exception e) {
                     updateCount();
                     updateConnectionStatus(clientCount,"Disconnected");
+                    baccaratInfoHashMap.get(clientCount).clear();
                     updateGameInfo();
                     //send(count);
                     clients.remove(this);
