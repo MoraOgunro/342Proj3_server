@@ -24,8 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7a05fb2a-2b4b-49bc-9a9f-2232a36b7111" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BaccaratGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaccaratGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/JavaFXTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JavaFXTemplate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,9 +78,20 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.JavaFXTemplate">
-    <configuration name="JavaFXTemplate" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+    <configuration name="JavaFXTemplate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JavaFXTemplate" />
       <module name="projectThreeServer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -92,50 +105,50 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyTest.evaluateBankerDraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MyTest.evaluateBankerDraw2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="projectThreeServer" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyTest" />
-      <option name="METHOD_NAME" value="evaluateBankerDraw" />
+      <option name="METHOD_NAME" value="evaluateBankerDraw2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyTest.evaluatePlayerDraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MyTest.handTotal2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="projectThreeServer" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyTest" />
-      <option name="METHOD_NAME" value="evaluatePlayerDraw" />
+      <option name="METHOD_NAME" value="handTotal2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyTest.evaluateWinnings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MyTest.whoWon2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="projectThreeServer" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyTest" />
-      <option name="METHOD_NAME" value="evaluateWinnings" />
+      <option name="METHOD_NAME" value="whoWon2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.JavaFXTemplate" />
+      <item itemvalue="JUnit.MyTest.handTotal2" />
+      <item itemvalue="JUnit.MyTest.whoWon2" />
+      <item itemvalue="JUnit.MyTest.evaluateBankerDraw2" />
       <item itemvalue="JUnit.MyTest" />
-      <item itemvalue="JUnit.MyTest.evaluateBankerDraw" />
-      <item itemvalue="JUnit.MyTest.evaluatePlayerDraw" />
-      <item itemvalue="JUnit.MyTest.evaluateWinnings" />
+      <item itemvalue="Application.JavaFXTemplate" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.JavaFXTemplate" />
         <item itemvalue="JUnit.MyTest" />
-        <item itemvalue="JUnit.MyTest.evaluateWinnings" />
-        <item itemvalue="JUnit.MyTest.evaluatePlayerDraw" />
-        <item itemvalue="JUnit.MyTest.evaluateBankerDraw" />
+        <item itemvalue="JUnit.MyTest.evaluateBankerDraw2" />
+        <item itemvalue="JUnit.MyTest.whoWon2" />
+        <item itemvalue="JUnit.MyTest.handTotal2" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +178,7 @@
       <workItem from="1603989706782" duration="19573000" />
       <workItem from="1604079876596" duration="18533000" />
       <workItem from="1604107780101" duration="3967000" />
-      <workItem from="1604158380043" duration="4708000" />
+      <workItem from="1604158380043" duration="8448000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Classes">
       <created>1603470297918</created>
@@ -286,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604096408479</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="game finished">
+      <created>1604163675566</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1604163675566</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +341,8 @@
     <MESSAGE value="major bug fix: outputstream not updating after first write" />
     <MESSAGE value="Data sending to 1 client done" />
     <MESSAGE value="Port Input and Error Messages done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Port Input and Error Messages done" />
+    <MESSAGE value="game finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="game finished" />
   </component>
   <component name="WindowStateProjectService">
     <state x="694" y="342" key="#Notifications" timestamp="1603759118018">
@@ -364,38 +385,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603860280180" />
-    <state width="914" height="282" key="GridCell.Tab.0.bottom" timestamp="1604163178925">
+    <state width="914" height="280" key="GridCell.Tab.0.bottom" timestamp="1604167263536">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604163178925" />
-    <state width="914" height="282" key="GridCell.Tab.0.center" timestamp="1604163178925">
+    <state width="914" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604167263536" />
+    <state width="914" height="280" key="GridCell.Tab.0.center" timestamp="1604167263536">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604163178925" />
-    <state width="914" height="282" key="GridCell.Tab.0.left" timestamp="1604163178925">
+    <state width="914" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604167263536" />
+    <state width="914" height="280" key="GridCell.Tab.0.left" timestamp="1604167263536">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604163178925" />
-    <state width="914" height="282" key="GridCell.Tab.0.right" timestamp="1604163178925">
+    <state width="914" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604167263536" />
+    <state width="914" height="280" key="GridCell.Tab.0.right" timestamp="1604167263536">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604163178925" />
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1604098618997">
+    <state width="914" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604167263536" />
+    <state width="914" height="272" key="GridCell.Tab.1.bottom" timestamp="1604166839776">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604098618997" />
-    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1604098618997">
+    <state width="914" height="272" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604166839776" />
+    <state width="914" height="272" key="GridCell.Tab.1.center" timestamp="1604166839776">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604098618997" />
-    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1604098618997">
+    <state width="914" height="272" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604166839776" />
+    <state width="914" height="272" key="GridCell.Tab.1.left" timestamp="1604166839776">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604098618997" />
-    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1604098618997">
+    <state width="914" height="272" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604166839776" />
+    <state width="914" height="272" key="GridCell.Tab.1.right" timestamp="1604166839776">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604098618997" />
+    <state width="914" height="272" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604166839776" />
     <state x="163" y="224" key="RollbackChangesDialog" timestamp="1603990517976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -430,6 +451,15 @@
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603470032887" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Server.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="java.lang.Integer" memberName="value" />

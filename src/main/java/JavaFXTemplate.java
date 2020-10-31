@@ -72,6 +72,11 @@ public class JavaFXTemplate extends Application {
 			String port = portField.getText();
 			try{
 				ConnectionInfo.setPORT(Integer.parseInt(port));
+				serverConnection = new Server(data -> {
+					Platform.runLater(()->{
+						updateGUI((HashMap<Integer, BaccaratInfo>) data);
+					});
+				});
 			}catch (Exception e){
 				connectLabel.setText("Can't Start Port. Try Again.");
 				connectLabel.setTextFill(Color.web("#b30404"));
@@ -79,11 +84,7 @@ public class JavaFXTemplate extends Application {
 			}
 			connectLabel.setText("Server is running!");
 			connectLabel.setTextFill(Color.web("#009603"));
-			serverConnection = new Server(data -> {
-				Platform.runLater(()->{
-					updateGUI((HashMap<Integer, BaccaratInfo>) data);
-				});
-			});
+
 		});
 		offButton.setOnAction(event -> {
 			connectLabel.setText("This feature doesn't work yet :(");

@@ -54,7 +54,7 @@ public class Server{
 
         public void run() {
 
-            try(ServerSocket mysocket = new ServerSocket(5555,2)){
+            try(ServerSocket mysocket = new ServerSocket(ConnectionInfo.getPORT(),2)){
                 System.out.println("Server is waiting for a client!");
 
                 while(true) {
@@ -151,10 +151,9 @@ public class Server{
                     baccaratInfoHashMap.get(clientCount).playerCards = game.get(clientCount).playerHand;
                     baccaratInfoHashMap.get(clientCount).bankerCards = game.get(clientCount).bankerHand;
                     //TODO send baccaratInfo back to client and update server gui
+
                     updateGameInfo();
                     syncClient();
-
-
                 }
                 catch(Exception e) {
                     updateCount();

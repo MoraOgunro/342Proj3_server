@@ -50,6 +50,9 @@ public class BaccaratGame {
         if(BaccaratGameLogic.evaluateBankerDraw(bankerHand,c)){
             bankerHand.add(theDealer.drawOne());
         }
+
+        theDealer.generateDeck();
+        theDealer.shuffleDeck();
     }
 
 }
