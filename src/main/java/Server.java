@@ -97,6 +97,7 @@ public class Server{
         public void syncClient() {
 
             try{
+                //baccaratInfoHashMap.get(this.clientCount).playingAnotherHand = false;
                 out.writeObject(baccaratInfoHashMap.get(this.clientCount));
                 out.reset();
             }catch (Exception e){
@@ -146,10 +147,10 @@ public class Server{
                     baccaratInfoHashMap.get(clientCount).bankerTotal = BaccaratGameLogic.handTotal(game.get(clientCount).bankerHand);
                     baccaratInfoHashMap.get(clientCount).whoWon = game.get(clientCount).whoWon;
                     baccaratInfoHashMap.get(clientCount).eval = "You bet " + game.get(clientCount).betOn + " and " + game.get(clientCount).whoWon + " won";
-                    baccaratInfoHashMap.get(clientCount).playingAnotherHand = false;
+                    //baccaratInfoHashMap.get(clientCount).playingAnotherHand = false;
                     baccaratInfoHashMap.get(clientCount).playerCards = game.get(clientCount).playerHand;
                     baccaratInfoHashMap.get(clientCount).bankerCards = game.get(clientCount).bankerHand;
-                    //TODO send baccaratInfo back
+                    //TODO send baccaratInfo back to client and update server gui
                     updateGameInfo();
                     syncClient();
 
@@ -169,7 +170,7 @@ public class Server{
                     } catch (IOException ioException) {
                         ioException.printStackTrace();
                     }
-                    this.currentThread().interrupt();
+                    this.interrupt();
                     break;
                 }
             }

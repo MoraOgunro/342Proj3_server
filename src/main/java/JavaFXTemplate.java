@@ -103,14 +103,14 @@ public class JavaFXTemplate extends Application {
 		c1GameInfoBox.getItems().clear();
 		if(c1StatusLabel.getText().equals("Connected")){
 			c1GameInfoBox.getItems().add("Bet: " + baccaratInfoHashMap.get(1).bet);
-			c1GameInfoBox.getItems().add("Total: " +baccaratInfoHashMap.get(1).playerTotal);
+			c1GameInfoBox.getItems().add("Total: " +baccaratInfoHashMap.get(1).totalEarnings);
 			c1GameInfoBox.getItems().add("Playing Another Hand?: " +baccaratInfoHashMap.get(1).playingAnotherHand);
 
 		}
 		c2GameInfoBox.getItems().clear();
 		if(c2StatusLabel.getText().equals("Connected")){
 			c2GameInfoBox.getItems().add("Bet: " +baccaratInfoHashMap.get(2).bet);
-			c2GameInfoBox.getItems().add("Total: " +baccaratInfoHashMap.get(2).playerTotal);
+			c2GameInfoBox.getItems().add("Total: " +baccaratInfoHashMap.get(2).totalEarnings);
 			c2GameInfoBox.getItems().add("Playing Another Hand?: " +baccaratInfoHashMap.get(2).playingAnotherHand);
 		}
 	}
